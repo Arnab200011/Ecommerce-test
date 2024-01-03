@@ -8,6 +8,153 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
 
+  <style>
+
+    body{
+      background-color: #ebe6ed;
+    }
+  
+    #slider-apple,#slider-game,#slider-laptop,#slider-home,#slider-camera{
+      max-width: 1224px;
+      overflow: hidden;
+      
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #slider-apple{
+      background-color: #c0e4d2;
+      border-radius: 10px;
+      padding-right: 10px;
+    }
+
+    #slider-game{
+      background-color: #afe0e5;
+      border-radius: 10px;
+      padding-right: 10px;
+      margin-top: 20px;
+
+    }
+    
+    
+    .product-container {
+      
+      display: flex;
+      margin-left: 2%;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -ms-overflow-style: none;
+    }
+    .product-container::-webkit-scrollbar {
+      display: none;
+    }
+    .product-container.active {
+      cursor: grabbing;
+      cursor: -webkit-grabbing;
+      scroll-snap-type: unset;
+      
+    }
+    .product-card {
+      display: flex;
+      min-width: 320px;
+      max-height: 180px;
+      max-width: 320px;
+      margin-right: 18px;
+      scroll-snap-align:start;
+      border-radius: 20px;
+      box-shadow: 0px 0px 5px rgb(181, 181, 181);
+      
+      
+    }
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit:cover;
+      border-radius: 10px;
+      
+      
+    }
+    .product-card img:hover{
+      transform: scale(1.08);
+      
+    }
+    
+    
+    .product-container:hover{
+      cursor: grab;
+      
+    }
+    .product-container:active{
+      cursor: grabbing;
+      
+    }
+  
+    section{
+      margin-bottom: 60px;
+    }
+   #apple-heading{
+    background-color: rgb(208, 233, 254);
+    
+    
+   }
+   h1{
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0px;
+    
+   }
+   .general{
+    
+    
+    border-radius: 20px;
+    font-size: 24px;
+    margin-bottom: 60px;
+   }
+   #deals-heading{
+    margin-bottom: 20px;
+    background-color:rgb(229, 240, 236);
+    border-radius:10px;
+    
+   }
+
+   #deals-heading h1{
+    padding-top: 30px;
+    padding-bottom: 30px;
+   }
+
+   #popular-heading{
+    background-color: rgb(180, 219, 207);
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+   }
+  
+   @media screen and (max-width:430px) {
+    #slider-apple h1, #slider-game h1{
+      border-radius: 20px;
+      background-color:#ede4d7;
+      padding: 10px;
+      margin: 0px;
+      font-size: 15px;
+      margin-top: 8px;
+      margin-left:10px;
+      margin-right:10px;
+     }
+
+     #deals-heading h1{
+      font-size: 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-weight: 700;
+     }
+     #popular-heading h1{
+      font-size: 15px;
+      box-shadow: 0px 0px 5px gray;
+      border-radius: 10px;
+     }
+    
+   }
+  </style>
+
   <body>
 
             
@@ -251,14 +398,62 @@
       class="reveal"
       style="
         margin-top: 0px;
-        padding-top: 140px;
+        padding-top: 50px;
         padding-left: 40px;
         padding-right: 40px;
         
       "
       id="deals"
     >
-      <div id="deals-div-container" class="reveal">
+
+    <div id="deals-heading" >
+      <h1>Top Deals</h1>
+
+      <div id="slider-apple">
+        
+        <h1>Apple Products</h1>
+      
+        <section style="margin-top: 40px;" class="product-container">
+          <div class="product-card"> <img src="https://www.apple.com/newsroom/images/live-action/april-2021/apple_product-availability-spring21_iphone12-purple_us_04292021_big_carousel.jpg.large.jpg"/></div>
+          <div class="product-card"> <img src="./images/apple1.jpg"/></div>
+          <div class="product-card"> <img src="./images/apple2.webp"/></div>
+          <div class="product-card"> <img src="./images/apple.3.webp"/></div>
+          <div class="product-card"> <img src="./images/airpod2.jpg"/></div>
+          <div class="product-card"> <img src="./images/airpod3.jpg"/></div>
+          <div class="product-card"> <img src="./images/mac1.jpg"/></div>
+          <div class="product-card"><img src="https://www.apple.com/newsroom/images/product/watch/standard/apple-watch-series4_09122018_LP_hero.jpg.og.jpg" alt=""></div>
+          <div class="product-card"> <img src="https://www.apple.com/newsroom/images/product/watch/standard/Apple-Watch-S8-2up-hero-220907.jpg.landing-big_2x.jpg"/></div>
+          <div class="product-card"> <img src="https://static1.squarespace.com/static/5446f93de4b0a3452dfaf5b0/t/58c4a935ff7c50ccf2292396/1489283388279/?format=1500w"/></div>
+
+          
+        </section>
+      </div>
+
+      <div id="slider-game">
+        
+        <h1>Gaming Products</h1>
+      
+        <section style="margin-top: 40px;" class="product-container">
+          <div class="product-card"> <img src="./images/playstation1.webp"/></div>
+          <div class="product-card"> <img src="./images/play2.webp"/></div>
+          <div class="product-card"> <img src="./images/play3.jpg"/></div>
+          <div class="product-card"> <img src="./images/xbox1.jpg"/></div>
+          <div class="product-card"> <img src="./images/xbox2.jpg"/></div>
+          <div class="product-card"> <img src="./images/xbox3.webp"/></div>
+          <div class="product-card"> <img src="./images/xbox-final.jpg"/></div>
+          <div class="product-card"><img src="./images/game1.jpeg" alt=""></div>
+          <div class="product-card"> <img src="./images/game2.webp"/></div>
+          <div class="product-card"> <img src="./images/game3.webp"/></div>
+    
+          
+        </section>
+
+    
+    </div>
+    </div>
+
+      
+      <!-- <div id="deals-div-container" class="reveal">
         <h2 style="margin-bottom: 40px; text-align: center">Top Deals</h2>
 
         <div id="div-container">
@@ -313,25 +508,29 @@
             <h5>UPTO 30% OFF</h5>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
 
     <section class="reveal" id="services">
       
+      <div id="popular-heading">
+        <h1>Popular Products</h1>
 
+        <div id="popular-div">
+        
+          <div><img src="https://i.pinimg.com/originals/35/20/f4/3520f46fce4fed7dece38ccefe7ebbf4.jpg" alt=""></div>
+          <div><img src="https://i.pinimg.com/564x/c4/45/c9/c445c941f65835639ff8f6c99752a16c.jpg" alt=""></div>
+          <div><img src="https://i.pinimg.com/originals/4c/90/93/4c90934685da85874753ca39594272da.jpg" alt=""></div>
+          <div><img src="https://i.pinimg.com/564x/ee/29/2b/ee292b6ab43cb40983b0f51a8303ab21.jpg" alt=""></div>
+          <div><img src="https://i.pinimg.com/564x/90/41/c6/9041c61c05abe663571b2066a20366a9.jpg" alt=""></div>
+          <div><img src="https://i.pinimg.com/564x/ce/b9/b6/ceb9b6825d4a2dc1aefd53d5f74d2809.jpg" alt=""></div>
+          <div><img src="https://i.pinimg.com/564x/b1/d7/e1/b1d7e1ba9e08a6d11df98ae0af36cecd.jpg" alt=""></div>
+          <div><img src="https://i.pinimg.com/564x/8d/4b/75/8d4b75b5a4a50f728a3e6313a42b5f52.jpg" alt=""></div>
+        </div>
+      </div>
       
 
-      <div id="popular-div">
-        
-        <div><img src="https://i.pinimg.com/originals/35/20/f4/3520f46fce4fed7dece38ccefe7ebbf4.jpg" alt=""></div>
-        <div><img src="https://i.pinimg.com/564x/c4/45/c9/c445c941f65835639ff8f6c99752a16c.jpg" alt=""></div>
-        <div><img src="https://i.pinimg.com/originals/4c/90/93/4c90934685da85874753ca39594272da.jpg" alt=""></div>
-        <div><img src="https://i.pinimg.com/564x/ee/29/2b/ee292b6ab43cb40983b0f51a8303ab21.jpg" alt=""></div>
-        <div><img src="https://i.pinimg.com/564x/90/41/c6/9041c61c05abe663571b2066a20366a9.jpg" alt=""></div>
-        <div><img src="https://i.pinimg.com/564x/ce/b9/b6/ceb9b6825d4a2dc1aefd53d5f74d2809.jpg" alt=""></div>
-        <div><img src="https://i.pinimg.com/564x/b1/d7/e1/b1d7e1ba9e08a6d11df98ae0af36cecd.jpg" alt=""></div>
-        <div><img src="https://i.pinimg.com/564x/8d/4b/75/8d4b75b5a4a50f728a3e6313a42b5f52.jpg" alt=""></div>
-      </div>
+      
   
   
     </section>
@@ -424,5 +623,37 @@
     ></script>
     <script src="./script.js"></script>
     <!-- script finish here -->
+
+    <script>
+      [...document.querySelectorAll('.product-container')].forEach((container, n = !1, i = void 0, r = void 0, a = !1, t = 0) => {
+        container.addEventListener("mousedown", function(e) {
+           n = !0,
+           this.classList.add("active")
+           i = e.pageX - this.offsetLeft,
+           r = this.scrollLeft
+        })
+        container.addEventListener("mouseleave", function(e) {
+           n = !1,
+           this.classList.remove("active")
+        })
+        container.addEventListener("mouseup", function(e) {
+           a && (e.preventDefault(), a = !1),
+           n = !1,
+           this.classList.remove("active")
+        })
+        container.addEventListener("mousemove", function(e) {
+           var t;
+           n && (
+                e.preventDefault(),
+                t = e.pageX - this.offsetLeft,
+                t = r - 3 * (t - i),
+                console.log(e.movementX),
+                5 < Math.abs(this.scrollLeft - t) && (a = !0),
+                this.scrollLeft = t
+           )
+        })
+     })
+
+    </script>
   </body>
 </html>
