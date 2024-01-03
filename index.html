@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Market</title>
+    <link rel="stylesheet" href="./bootstrap.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+
+            
+    <header>
+
+      <nav id="nav-bar" class="navbar navbar-expand-xl bg-body-tertiary">
+        <div id="nav-div" class="container-fluid">
+          <img id="logo" src="./images/logo3-removebg-preview.png" alt="">
+          <button
+            id="hamMenu"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <img id="ham-icon" src="./images/hamburger.png" alt="">
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div id="nav-item">
+              <a href="#home" class="active">Home</a>
+              <a href="#deals">Deals</a>
+              <a href="#services">Popular</a>
+              <a href="#contact">Contact</a>
+            </div>
+
+            <form id="search-form" class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                style="margin-left: 20px;"
+                
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+ 
+          </div>
+
+          <div id="n-p-container" style="display: flex; justify-content: space-between; align-items:center; margin-left:50px;">
+
+
+
+            <ul style="margin: 0px 24px 0px 0px; padding: 0px">
+              <li style="padding: 0px; margin: 0px">
+                
+
+                <button id="notification-btn" data-bs-toggle="modal"
+                data-bs-target="#exampleModal" type="button" class="btn btn-primary position-relative">
+                <img id="notification" width="25px" src="./images/bell.png" alt="" />
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    5+
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                </button>
+  
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                          Notifications
+                        </h1>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">You have 0 notification</div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <button type="button" class="btn">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                
+              </li>
+            </ul>  
+      
+            <div style="margin-right: 24px">
+            <button id="cart-btn" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+              <img id="cart" width="25px" src="./images/shopping-cart.png" alt="">
+            </button>
+    
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                  <div>
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div id="canvas-body" class="offcanvas-body">
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            
+            <div class="btn-group dropstart">
+              <button id="wishlist" style="border-radius: 10px;" type="button" class="btn " data-bs-toggle="dropdown" aria-expanded="false">
+                <img id="wishlist-img" width="25px" src="./images/add-to-favorites.png" alt="">
+              </button>
+              <ul style="height: 400px; top:56px; right:20px; width:400px;" class="dropdown-menu">
+                
+              </ul>
+            </div>
+
+            <div id="profile-div">
+          
+              <div id="profile-img-div" style="display: flex; justify-content:center; align-items:center;">
+                <img src="images/profile.png" alt="" />
+                
+              </div>
+              <div class="profile-info-div">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ab.
+                </p>
+              </div>
+          </div>
+
+            
+
+          </div>
+
+        
+        
+      </nav>
+
+    </header>
+
+    <!-- main body start here -->
+    <section id="home">
+      <div class="container reveal">
+        <div class="slider">
+          <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1" />
+            <input type="radio" name="radio-btn" id="radio2" />
+            <input type="radio" name="radio-btn" id="radio3" />
+            <input type="radio" name="radio-btn" id="radio4" />
+            <input type="radio" name="radio-btn" id="radio5" />
+            <input type="radio" name="radio-btn" id="radio6" />
+
+            <div class="slide first">
+              <img src="./images/home-slider1.png" alt="" />
+            </div>
+            <div class="slide">
+              <img src="./images/home-slider.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="./images/camera-slider.png" alt="" />
+            </div>
+            <div class="slide">
+              <img src="./images/slider1.webp" alt="" />
+            </div>
+            
+
+            <div class="navigation-auto">
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+              <div class="auto-btn4"></div>
+              
+            </div>
+          </div>
+
+          <div class="navigation-mannual">
+            <label for="radio1" class="mannual-btn"></label>
+            <label for="radio2" class="mannual-btn"></label>
+            <label for="radio3" class="mannual-btn"></label>
+            <label for="radio4" class="mannual-btn"></label>
+            
+          </div>
+        </div>
+      </div>
+
+      <div style="z-index: 1000; margin-top: 60px" class="catagory reveal">
+        <div class="catagory-div">
+          <div class="catagory-img-div">
+            <img src="./images/catagori4.webp" alt="" />
+          </div>
+          <div class="catagory-dropdown btn">
+            <a href="#">More</a>
+          </div>
+        </div>
+        <div class="catagory-div">
+          <div class="catagory-img-div">
+            <a href="./cosmetics.html"
+              ><img src="./images/catagory3.avif" alt=""
+            /></a>
+          </div>
+          <div class="catagory-dropdown btn">
+            <a href="./cosmetics.html">Cosmetics</a>
+          </div>
+        </div>
+        <div class="catagory-div">
+          <div class="catagory-img-div">
+            <a href="./electronics.html"
+              ><img src="./images/gst-electronics-discount.jpg" alt=""
+            /></a>
+          </div>
+          <div class="catagory-dropdown btn">
+            <a href="./electronics.html">Electronics</a>
+          </div>
+        </div>
+        <div class="catagory-div">
+          <div class="catagory-img-div">
+            <a href="./groceries.html"
+              ><img src="./images/gro10.png" alt=""
+            /></a>
+          </div>
+          <div class="catagory-dropdown btn">
+            <a href="./groceries.html">Groceries</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- section 4 (slider) finish here -->
+    </section>
+
+    <section
+      class="reveal"
+      style="
+        margin-top: 0px;
+        padding-top: 140px;
+        padding-left: 40px;
+        padding-right: 40px;
+        
+      "
+      id="deals"
+    >
+      <div id="deals-div-container" class="reveal">
+        <h2 style="margin-bottom: 40px; text-align: center">Top Deals</h2>
+
+        <div id="div-container">
+          <div>
+            <img class="add-img" src="images/Puma-Offers.jpg" alt="" />
+            <h5>30% Flat Off</h5>
+          </div>
+          <div>
+            <img class="add-img" src="images/Puma-Offers.jpg" alt="" />
+            <h5>Flat 30% OFF</h5>
+          </div>
+          <div>
+            <img class="add-img" src="images/Puma-Offers.jpg" alt="" />
+            <h5>30% OFF ON STYLE</h5>
+          </div>
+          <div>
+            <img class="add-img" src="images/myntra-pw-deal-4.webp" alt="" />
+            <h5>85% OFF</h5>
+          </div>
+
+          <div>
+            <img class="add-img" src="images/myntra-pw-deal-4.webp" alt="" />
+            <h5>30% Flat Off</h5>
+          </div>
+          <div>
+            <img class="add-img" src="images/cloth-ad-2.jpeg" alt="" />
+            <h5>Flat 30% OFF</h5>
+          </div>
+          <div>
+            <img class="add-img" src="images/cloth-ad-3.jpeg" alt="" />
+            <h5>30% OFF ON STYLE</h5>
+          </div>
+          <div>
+            <img class="add-img" src="images/cloth-ad.webp" alt="" />
+            <h5>85% OFF</h5>
+          </div>
+
+          <div>
+            <img class="add-img" src="images/deal5.webp" alt="" />
+            <h5>30% off on CABIN</h5>
+          </div>
+          <div>
+            <img class="add-img" src="images/deal3.jpg" alt="" />
+            <h5>30% OFF ON CANNON</h5>
+          </div>
+          <div>
+            <img class="add-img" src="images/deal5.webp" alt="" />
+            <h5>10% OFF ON FUJIFILM</h5>
+          </div>
+          <div>
+            <img class="add-img" src="images/deals1.jpg" alt="" />
+            <h5>UPTO 30% OFF</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal" id="services">
+      
+
+      
+
+      <div id="popular-div">
+        
+        <div><img src="https://i.pinimg.com/originals/35/20/f4/3520f46fce4fed7dece38ccefe7ebbf4.jpg" alt=""></div>
+        <div><img src="https://i.pinimg.com/564x/c4/45/c9/c445c941f65835639ff8f6c99752a16c.jpg" alt=""></div>
+        <div><img src="https://i.pinimg.com/originals/4c/90/93/4c90934685da85874753ca39594272da.jpg" alt=""></div>
+        <div><img src="https://i.pinimg.com/564x/ee/29/2b/ee292b6ab43cb40983b0f51a8303ab21.jpg" alt=""></div>
+        <div><img src="https://i.pinimg.com/564x/90/41/c6/9041c61c05abe663571b2066a20366a9.jpg" alt=""></div>
+        <div><img src="https://i.pinimg.com/564x/ce/b9/b6/ceb9b6825d4a2dc1aefd53d5f74d2809.jpg" alt=""></div>
+        <div><img src="https://i.pinimg.com/564x/b1/d7/e1/b1d7e1ba9e08a6d11df98ae0af36cecd.jpg" alt=""></div>
+        <div><img src="https://i.pinimg.com/564x/8d/4b/75/8d4b75b5a4a50f728a3e6313a42b5f52.jpg" alt=""></div>
+      </div>
+  
+  
+    </section>
+
+    <section
+      class="reveal"
+      style="
+        padding-top: 90px;
+        background-image: linear-gradient(
+          110.5deg,
+          rgba(71, 114, 148, 1) 14.9%,
+          rgba(149, 245, 211, 1) 77.9%
+        );
+      "
+      id="contact"
+    >
+      <div class="reveal">
+        <div id="contact-div">
+          <div>
+            <ul>
+              <li style="font-size: 18px; font-weight: 700">Catagory</li>
+              <li>Groceries</li>
+              <li>Bakery & Eggs & Dair</li>
+              <li>Packaged Food</li>
+              <li>Imported & Gourmet</li>
+              <li>Personal Care</li>
+              <li>Electronics</li>
+              <li>Branded Clothing</li>
+              <li>Cleaning & Household</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li style="font-size: 15px; font-weight: 700">Information</li>
+              <li>About Us</li>
+              <li>FAQs</li>
+              <li>Return Policy</li>
+              <li>Privacy Policy</li>
+              <li>Locate Us</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li style="font-size: 18px; font-weight: 700;
+              margin-bottom: 10px;">Contact Us</li>
+              <li style="font-size: 15px; margin-bottom:10px;">
+                <img style="width: 30px" src="images/gmail.png" alt="" />
+                E-mail:<span id="contact-span">arnabmondal@gmail.com</span>
+              </li>
+              <li style="font-size: 18px; margin-top: 20px">Download App</li>
+              <li style="font-size: 15px">
+                <img style="width: 140px" src="images/googlePlay.png" alt="" />
+              </li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="payment-div">
+          <p id="payment-method">Payment Method</p>
+          <img class="paymentMethodIcon" src="images/visa.png" alt="" />
+          <img class="paymentMethodIcon" src="images/rupay.png" alt="" />
+          <img class="paymentMethodIcon" src="images/master-card.png" alt="" />
+          <img class="paymentMethodIcon" src="images/paypal.png" alt="" />
+          <img class="paymentMethodIcon" src="images/paytm.png" alt="" />
+          <img
+            id="net-banking-icon"
+            width="100px"
+            src="images/netBanking.png"
+            alt=""
+          />
+        </div>
+
+        <div>
+          <p align="center" style="color: black; margin-top: 50px">Copyright</p>
+        </div>
+      </div>
+    </section>
+    <!-- main body finish here -->
+
+    <!-- script start here -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+    <!-- script finish here -->
+  </body>
+</html>
