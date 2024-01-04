@@ -13,8 +13,19 @@
     body{
       background-color: #ebe6ed;
     }
-  
-    #slider-apple,#slider-game,#slider-laptop,#slider-home,#slider-camera{
+
+    #wish-ul{
+      height: 400px;
+      top:56px;
+      right:20px;
+      width:400px; overflow-y:scroll;
+    }
+    .modal-body ul li{
+      border-bottom:1px solid black;
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+    #slider-apple,#slider-game{
       max-width: 1224px;
       overflow: hidden;
       
@@ -88,9 +99,7 @@
       
     }
   
-    section{
-      margin-bottom: 60px;
-    }
+    
    #apple-heading{
     background-color: rgb(208, 233, 254);
     
@@ -124,8 +133,7 @@
    #popular-heading{
     background-color: rgb(180, 219, 207);
     border-radius: 10px;
-    margin-left: 40px;
-    margin-right: 40px;
+    padding: 40px;
    }
   
    @media screen and (max-width:430px) {
@@ -151,6 +159,14 @@
       box-shadow: 0px 0px 5px gray;
       border-radius: 10px;
      }
+    
+   }
+   
+   @media screen and (max-width:526px) {
+
+    #wish-ul{
+      right:-150px
+    }
     
    }
   </style>
@@ -189,7 +205,7 @@
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
-                style="margin-left: 20px;"
+                
                 
               />
               <button class="btn btn-outline-success" type="submit">
@@ -203,17 +219,16 @@
 
 
 
+           
+
             <ul style="margin: 0px 24px 0px 0px; padding: 0px">
               <li style="padding: 0px; margin: 0px">
                 
 
                 <button id="notification-btn" data-bs-toggle="modal"
-                data-bs-target="#exampleModal" type="button" class="btn btn-primary position-relative">
-                <img id="notification" width="25px" src="./images/bell.png" alt="" />
-                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    5+
-                    <span class="visually-hidden">unread messages</span>
-                  </span>
+                data-bs-target="#exampleModal" type="button" class="btn position-relative">
+                <img id="notification" width="25px" src="./images/add-to-favorites.png" alt="" />
+                  
                 </button>
   
                 <div
@@ -236,7 +251,25 @@
                           aria-label="Close"
                         ></button>
                       </div>
-                      <div class="modal-body">You have 0 notification</div>
+                      <div class="modal-body">
+                        <ul>
+                          <li>
+                            <div style="display: flex;">
+                              <div style="flex: 1;">
+                                <p style="line-height: 18px;">Apple iPhone 15 Pro Max (256 GB) - Blue Titanium</p>
+                                <p style="font-size: 18px; margin-bottom:0px;"><b>&#8377 1,56,900</b></p>
+                                <p style="font-size: 10px; margin-top:0px;margin-bottom:0px;padding:0px; color:rgb(67, 163, 201);">In stock</p>
+                                <p style="font-size: 10px; margin-top:0px;margin-bottom:0px; padding:0px;">Size: 256 GB</p>
+                                <button class="btn" style="margin-right: 20px;">Delete</button><button class="btn">Buy</button>
+                              </div>
+                              <div>
+                                <img style="border-radius: 8px; margin-left:20px;" width="100px" src="./images/iphone-2.jpeg" alt="">
+                              </div>
+                              
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
                       <div class="modal-footer">
                         <button
                           type="button"
@@ -253,47 +286,72 @@
   
                 
               </li>
-            </ul>  
-      
-            <div style="margin-right: 24px">
-            <button id="cart-btn" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
-              <img id="cart" width="25px" src="./images/shopping-cart.png" alt="">
-            </button>
-    
-                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-                  <div>
-                    <div class="offcanvas-header">
-                      <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div id="canvas-body" class="offcanvas-body">
-                    </div>
-                  </div>
-                </div>
-            </div>
+            </ul>
 
             
+      
+            
+
+            
+            
+            <!-- Default dropstart button -->
             <div class="btn-group dropstart">
-              <button id="wishlist" style="border-radius: 10px;" type="button" class="btn " data-bs-toggle="dropdown" aria-expanded="false">
-                <img id="wishlist-img" width="25px" src="./images/add-to-favorites.png" alt="">
+              <button id="notification-btn" type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                <img id="notification-icon" width="23px" src="./images/bell.png" alt="">
               </button>
-              <ul style="height: 400px; top:56px; right:20px; width:400px;" class="dropdown-menu">
-                
+              <ul id="notification-ul" class="dropdown-menu">
+                <!-- Dropdown menu links -->
+                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, omnis?</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam iure recusandae alias.</li>
+                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, vitae.</li>
               </ul>
             </div>
 
-            <div id="profile-div">
-          
-              <div id="profile-img-div" style="display: flex; justify-content:center; align-items:center;">
-                <img src="images/profile.png" alt="" />
+<!-- Split dropstart button -->
+            <div class="btn-group dropstart">
+              <button id="cart-btn" type="button" class="btn dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <img id="cart-icon" width="23px;" src="./images/shopping-cart.png" alt="">
+              </button>
+              <ul id="cart-drop" class="dropdown-menu">
+                <!-- Dropdown menu links -->
                 
-              </div>
-              <div class="profile-info-div">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ab.
-                </p>
-              </div>
-          </div>
+                  <li>
+                    <div style="display: flex;">
+                      <div style="flex: 1;">
+                        <p style="line-height: 18px;">Apple iPhone 15 Pro Max (256 GB) - Blue Titanium</p>
+                        <p style="font-size: 18px; margin-bottom:0px;"><b>&#8377 1,56,900</b></p>
+                        <p style="font-size: 10px; margin-top:0px;margin-bottom:0px;padding:0px; color:rgb(67, 163, 201);">In stock</p>
+                        <p style="font-size: 10px; margin-top:0px;margin-bottom:0px; padding:0px;">Size: 256 GB</p>
+                        <button class="btn" style="margin-right: 20px;">Delete</button><button class="btn">Buy</button>
+                      </div>
+                      <div>
+                        <img style="border-radius: 8px; margin-left:20px;" width="100px" src="./images/iphone-2.jpeg" alt="">
+                      </div>
+                      
+                    </div>
+                  </li>
+
+                  <li>
+                    <div style="display: flex;">
+                      <div style="flex: 1;">
+                        <p style="line-height: 18px;">Apple 2022 11-inch iPad Pro (Wi-Fi, 128GB) - Space Grey (4th Gen...</p>
+                        <p style="font-size: 18px; margin-bottom:0px;"><b>&#8377 78,900</b></p>
+                        <p style="font-size: 10px; margin-top:0px;margin-bottom:0px;padding:0px; color:rgb(67, 163, 201);">In stock</p>
+                        <p style="font-size: 10px; margin-top:0px;margin-bottom:0px; padding:0px;">Size: 128 GB</p>
+                        <button class="btn" style="margin-right: 20px;">Delete</button><button class="btn">Buy</button>
+                      </div>
+                      <div>
+                        <img style="border-radius: 8px; margin-left:20px;" width="100px" src="./images/apple1.jpg" alt="">
+                      </div>
+                      
+                    </div>
+                  </li>
+                
+              </ul>
+              
+            </div>
 
             
 
@@ -307,7 +365,7 @@
 
     <!-- main body start here -->
     <section id="home">
-      <div class="container reveal">
+      <div class="containerd reveal">
         <div class="slider">
           <div class="slides">
             <input type="radio" name="radio-btn" id="radio1" />
@@ -449,66 +507,9 @@
         </section>
 
     
-    </div>
-    </div>
+    
 
-      
-      <!-- <div id="deals-div-container" class="reveal">
-        <h2 style="margin-bottom: 40px; text-align: center">Top Deals</h2>
-
-        <div id="div-container">
-          <div>
-            <img class="add-img" src="images/Puma-Offers.jpg" alt="" />
-            <h5>30% Flat Off</h5>
-          </div>
-          <div>
-            <img class="add-img" src="images/Puma-Offers.jpg" alt="" />
-            <h5>Flat 30% OFF</h5>
-          </div>
-          <div>
-            <img class="add-img" src="images/Puma-Offers.jpg" alt="" />
-            <h5>30% OFF ON STYLE</h5>
-          </div>
-          <div>
-            <img class="add-img" src="images/myntra-pw-deal-4.webp" alt="" />
-            <h5>85% OFF</h5>
-          </div>
-
-          <div>
-            <img class="add-img" src="images/myntra-pw-deal-4.webp" alt="" />
-            <h5>30% Flat Off</h5>
-          </div>
-          <div>
-            <img class="add-img" src="images/cloth-ad-2.jpeg" alt="" />
-            <h5>Flat 30% OFF</h5>
-          </div>
-          <div>
-            <img class="add-img" src="images/cloth-ad-3.jpeg" alt="" />
-            <h5>30% OFF ON STYLE</h5>
-          </div>
-          <div>
-            <img class="add-img" src="images/cloth-ad.webp" alt="" />
-            <h5>85% OFF</h5>
-          </div>
-
-          <div>
-            <img class="add-img" src="images/deal5.webp" alt="" />
-            <h5>30% off on CABIN</h5>
-          </div>
-          <div>
-            <img class="add-img" src="images/deal3.jpg" alt="" />
-            <h5>30% OFF ON CANNON</h5>
-          </div>
-          <div>
-            <img class="add-img" src="images/deal5.webp" alt="" />
-            <h5>10% OFF ON FUJIFILM</h5>
-          </div>
-          <div>
-            <img class="add-img" src="images/deals1.jpg" alt="" />
-            <h5>UPTO 30% OFF</h5>
-          </div>
-        </div>
-      </div> -->
+  
     </section>
 
     <section class="reveal" id="services">
@@ -571,23 +572,28 @@
               <li>Privacy Policy</li>
               <li>Locate Us</li>
             </ul>
-          </div>
-          <div>
-            <ul>
+
+            <ul style="margin-right: 30px;" id="contact-ul">
               <li style="font-size: 18px; font-weight: 700;
               margin-bottom: 10px;">Contact Us</li>
               <li style="font-size: 15px; margin-bottom:10px;">
                 <img style="width: 30px" src="images/gmail.png" alt="" />
                 E-mail:<span id="contact-span">arnabmondal@gmail.com</span>
               </li>
-              <li style="font-size: 18px; margin-top: 20px">Download App</li>
-              <li style="font-size: 15px">
-                <img style="width: 140px" src="images/googlePlay.png" alt="" />
-              </li>
-              <li></li>
+                <li style="font-size: 18px; margin-top: 20px"><b>Download App</b></li>
+                <li style="font-size: 15px; display:flex;">
+                  <img style="width: 140px" src="images/googlePlay.png" alt="" />
+                  <img width="100px" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="">
+                </li>
+              
+              
             </ul>
           </div>
+
+
+          
         </div>
+        
         <div class="payment-div">
           <p id="payment-method">Payment Method</p>
           <img class="paymentMethodIcon" src="images/visa.png" alt="" />
@@ -604,7 +610,7 @@
         </div>
 
         <div>
-          <p align="center" style="color: black; margin-top: 50px">Copyright</p>
+          <p align="center" style="color: black; margin-top: 50px; font-size: 10px;padding-bottom:10px;">Created by Arnab Mondal &copyCopyright</p>
         </div>
       </div>
     </section>

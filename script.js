@@ -2,16 +2,6 @@
 
 
 
-let profile = true;
-document.getElementById("profile-div").addEventListener("click", () => {
-  if (profile) {
-    document.querySelector(".profile-info-div").style.display = "block";
-    profile = false;
-  } else {
-    document.querySelector(".profile-info-div").style.display = "none";
-    profile = true;
-  }
-});
 
 
 

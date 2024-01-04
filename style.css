@@ -1,21 +1,9 @@
-#profile-div {
-  position: relative;
-  border-radius: 20px;
-  width: 55px;
-  
-  
-}
+
 #logo{
   width: 140px;
 }
 
-#profile-span{
-  right: -1px;
-  top: -1px;
-}
-#nav-ui-ul{
-  margin-left: 45%;
-}
+
 #home{
   min-height: 100vh;
   position: relative;
@@ -25,32 +13,17 @@
 #ham-icon{
   width: 20px;
 }
-
-
-
-#profile-div img {
-  width: 40px;
+#cart-btn{
+  
+  margin-left: 20px;
 }
 
-.profile-info-div {
-  background-color: white;
-  position: absolute;
-  width: 270px;
-  height: 180px;
-  padding: 10px;
 
-  right: 5px;
-  top: 50px;
-  box-shadow: 0 0 5px rgb(49, 48, 48);
-  border-radius: 8px;
-  display: none;
-}
 
-#profile-div:hover {
-  box-shadow: 0 0 5px rgb(49, 48, 48);
-  border-radius: 8px;
-  cursor: pointer;
-}
+
+
+
+
 
 
 
@@ -92,6 +65,7 @@ a{
 header{
   right: 0px;
   left: 0px;
+  top: 3px;
   position: fixed;
   z-index: 7000;
   display: flex;
@@ -123,10 +97,42 @@ header nav a.active {
   opacity: 1;
 }
 
+#cart-drop{
+  width: 80vw;
+  padding: 40px;
+  right: 0px;
+  top:50px;
+}
+#cart-drop li{
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 5px gray;
+  border-radius: 10px;
+  padding: 20px;
+}
+
 @media (max-width: 1200px) {
   section h1 {
     font-size: 2rem;
     text-align: center;
+  }
+
+  #notification{
+    width: 18px;
+  }
+  #notification-icon{
+    width: 18px;
+  }
+  #cart-icon{
+    width: 18px;
+    
+    
+  }
+  #cart-btn{
+    border-radius: 8px;
+    margin-left: 20px;
+  }
+  #notification-btn{
+    border-radius: 8px;
   }
 
   #nav-item{
@@ -154,7 +160,7 @@ header nav a.active {
 
 @media (min-width: 1200px) {
 
-  #profile-div,
+  
   #searchbar,
   #search-nav,
   #search-icon-div {
@@ -162,23 +168,23 @@ header nav a.active {
   }
 }
 
-.container {
+.containerd {
   display: flex;
   justify-content: center;
   border-radius: 10px;
-  margin-top: 30px;
+  padding-top: 100px;
 }
 
 .slider {
-  width: 100%;
-  height: 550px;
+  width: 90vw;
+  height: 450px;
   border-radius: 10px;
   overflow: hidden;
 }
 
 .slides {
   width: 500%;
-  height: 550px;
+  height: 450px;
   display: flex;
 }
 
@@ -193,13 +199,13 @@ header nav a.active {
 
 .slide img {
   width: 100%;
-  height: 550px;
+  height: 450px;
   border-radius: 10px;
 }
 
 .navigation-mannual {
   position: absolute;
-  width: 100%;
+  width: 90vw;
   margin-top: -40px;
   display: flex;
   justify-content: center;
@@ -241,9 +247,9 @@ header nav a.active {
 .navigation-auto {
   position: absolute;
   display: flex;
-  width: 100%;
+  width: 90vw;
   justify-content: center;
-  margin-top: 510px;
+  margin-top: 410px;
 }
 
 .navigation-auto div {
@@ -322,9 +328,7 @@ h2 {
   font-weight: 600;
  
 }
-#wishlist:hover{
-  box-shadow: 0px 0px 5px gray;
-}
+
 
 h5 {
   text-align: center;
@@ -334,41 +338,6 @@ h5 {
 }
 
 
-
-.deals-top {
-  flex: 1;
-  margin-right: 15px;
-  display: flex;
-  flex-direction: column;
-}
-
-#about-div {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.add-cloth-img {
-  width: 100%;
-  max-width: 230px;
-  height: 140px;
-  box-shadow: 0px 0px 5px rgb(84, 84, 84);
-  border-radius: 4px;
-}
-
-.add-img {
-  width: 100%;
-  height: 70%;
-  border-radius: 10px;
-}
-
-#div-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 30px;
-  grid-gap: 50px;
-  width: 100%;
-}
-
 #nav-bar{
   width: 100%;
   border-radius: 10px;
@@ -376,44 +345,11 @@ h5 {
 }
 
 
-#div-container div img{
-  
-  width: 100%;
-  height: 100%;
-  box-shadow: 0px 0px 5px rgb(174, 174, 174);
-}
-
-#div-container div{
-  border-radius: 10px;
-  box-shadow: 0px 0px 5px rgb(173, 173, 173);
-  
-  
-}
-
-#div-container div:hover{
-  box-shadow: 0px 0px 5px rgb(78, 78, 78);
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-#popular-back-img{
-  opacity: 0.1;
-}
-
-
-
-
 
 #contact {
   min-height: 100vh;
 }
 
-#different-div1 {
-  padding: 0px;
-  background-color: rgb(247, 247, 247);
-  border-radius: 8px;
-  box-shadow: 0px 0px 5px rgb(169, 169, 169);
-}
 
 .catagory {
   display: grid;
@@ -466,23 +402,7 @@ h5 {
 }
 
 
-.electronics-div {
-  display: flex;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  border-radius: 10px;
-  background-color: rgb(245, 240, 234);
-}
-#nav-container{
-  background-color:#dfdae8;
-  border-radius: 12px;
-  padding: 0px;
-}
 
-#nav-container div{
-  background-color: #AE9BD0;
-  border-radius: 10px;
-}
 
 #cosmetics-heading{
   text-align: center;
@@ -508,20 +428,6 @@ h5 {
 
 
 
-.service-div-inner:hover {
-  box-shadow: 0px 0px 5px rgb(143, 143, 143);
-  border-radius: 10px;
-}
-
-.electronics-div div img {
-  width: 100%;
-  max-width: 150px;
-  max-height: 160px;
-  min-height: 115px;
-  height: 100%;
-  border-radius: 10px;
-}
-
 
 
 #services {
@@ -534,7 +440,7 @@ h5 {
   
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 30px;
+  grid-gap: 50px;
   padding: 20px;
   background-color: rgb(180, 219, 207);
   border-radius: 10px;
@@ -570,136 +476,131 @@ h5 {
   margin-right: 30px;
 }
 
-.service-div-inner {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
 
-  align-items: center;
-  padding: 10px;
-  background-color: rgb(255, 255, 255);
+
+#notification-ul{
+  width: 80vw;
+  padding: 40px;
+  right: 0px;
+  top:50px;
+
+}
+#notification-ul li{
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 5px gray;
   border-radius: 10px;
-  box-shadow: 0px 0px 5px rgb(217, 217, 217);
-  
-  max-width: 190px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 215px;
+  padding: 10px;
 }
 
-.service-div-inner div img{
-  width: 100%;
-  
-  box-shadow: 0px 0px 5px rgb(201, 201, 201);
-}
-
-
-
-ul{
-  list-style: none;
-}
-
-li{
-  text-decoration: none;
+#profile-ul{
+  top: 53px;
+  right: 0px;
+  width: 70vw;
+  overflow-y: scroll;
   
 }
-li nav a{
-  font-size: 14px;
-  padding: 4px 6px 4px 6px;
+.hello{
+  padding: 0px;
+  font-size: 10px;
 }
-
-
-#nav-topbar li{
-  width: 40vw;
-  margin-top: 20px;
-  border-bottom: 1px solid black;
-
-}
-
-#sidebar-ul li{
-  width: 40vw;
-  margin-top: 20px;
-}
-
-.dp-body {
+#profile-button{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding:10px 40px 10px 40px;
+  box-shadow: 0px 0px 5px gray;
+  margin-bottom: 10px;
+}
+#profile-btn{
+  padding: 2px 6px 2px 6px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+#noti-btn{
+  padding: 0px;
+  border: none;
+  padding: 2px 6px 2px 6px;
+  border-radius: 6px;
+}
+.account-profile{
+  font-size: 8px;
+  padding-left: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width:990px) {
-  #div-container div{
-    margin-top: 20px;
-  }
   
-}
-
-
-@media screen and (min-width: 971px) {
-  .electronics-div {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 30px;
-    padding-left: 40px;
-    padding-right: 40px;
+  .containerd{
+    padding-top: 100px;
   }
-
-  .electronics-div div img {
-    width: 100%;
-    max-width: 150px;
-    height: 130px;
-
+  .slider {
+    width: 80vw;
+    height: 350px;
     border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .slides {
+    width: 500%;
+    height: 350px;
+    display: flex;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 350px;
+  }
+
+  .navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 80vw;
+    justify-content: center;
+    margin-top: 310px;
+  }
+  .navigation-mannual {
+    position: absolute;
+    width: 80vw;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
   }
   
-  
 }
+
+
+
 
 @media screen and (max-width: 970px) {
-  .electronics-div {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 30px;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
+  
   #popular-div{
     grid-template-columns: 1fr 1fr;
   }
-  #div-container{
-    grid-template-columns: 1fr 1fr;
-  }
+  
 
 
-  #notification, #cart, #wishlist-img,#ham-icon{
+  #ham-icon{
     width: 20px;
   }
-  #cart-btn, #wishlist, #notification-btn, #hamMenu{
+  #hamMenu{
     padding: 2px 6px 2px 6px;
   }
   #logo{
     width: 45px;
   }
-  #profile-div img {
-    width: 30px;
-  }
-  #profile-span{
-    right: -1px;
-    top: -1px;
-  }
+  
   #search-form{
     margin-bottom: 20px;
   }
   #search-form input, #search-form button{
     height: 30px;
-    padding: 0px 4px 0px 4px;
+    
     font-size: 12px;
   }
   
-  #nav-ui-ul{
-    margin-left: 15%;
-    
-    
-  }
+  
   
 }
 
@@ -713,20 +614,9 @@ li nav a{
     padding-right: 30px;
   }
  
-  #nav-item{
-    /* margin-left: 25%; */
-  }
-  
-  
+ 
   
 
-  .electronics-div {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 30px;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
 
   .slider {
     width: 80vw;
@@ -756,28 +646,10 @@ li nav a{
 }
 
 @media screen and (max-width: 587px) {
-  .electronics-div {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 30px;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  .electronics-div div img {
-    width: 100%;
-    max-width: 150px;
-    max-height: 100px;
-    height: 100%;
-    border-radius: 10px;
-  }
-
-  
-
-  
+ 
 
   .slider {
-    width: 100vw;
+    width: 90vw;
     height: 250px;
     border-radius: 10px;
     overflow: hidden;
@@ -797,14 +669,14 @@ li nav a{
   .navigation-auto {
     position: absolute;
     display: flex;
-    width: 100vw;
+    width: 90vw;
     justify-content: center;
     margin-top: 210px;
   }
 
   .navigation-mannual {
     position: absolute;
-    width: 100vw;
+    width: 90vw;
     margin-top: -40px;
     display: flex;
     justify-content: center;
@@ -823,14 +695,12 @@ li nav a{
     font-size: 12px;
   }
 
-  .container {
+  .containerd {
     
     margin-top: 0px;
   }
 
-  #services{
-    height: 20vh;
-  }
+
 
   .paymentMethodIcon {
     width: 20px;
@@ -865,7 +735,7 @@ li nav a{
 
 
   .slider {
-    width: 100vw;
+    width: 90vw;
     height: 250px;
     border-radius: 10px;
     overflow: hidden;
@@ -885,14 +755,14 @@ li nav a{
   .navigation-auto {
     position: absolute;
     display: flex;
-    width: 100vw;
+    width: 90vw;
     justify-content: center;
     margin-top: 210px;
   }
 
   .navigation-mannual {
     position: absolute;
-    width: 100vw;
+    width: 90vw;
     margin-top: -40px;
     display: flex;
     justify-content: center;
@@ -902,11 +772,6 @@ li nav a{
 }
 
 
-@media screen and (min-width: 493px) and (max-width: 964px) {
-  
-
-  
-}
 
 @media screen and (max-width:602px) {
 
@@ -915,40 +780,63 @@ li nav a{
   }
   
 }
-@media screen and (max-width:679px) {
 
-  #contact-div {
+
+
+@media screen and (max-width:681px) {
   
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    color: black;
-  }
-  
-}
-
-
-@media screen and (max-width:442px) {
-  #profile-div img {
-    width: 24px;
-  }
-  #notification, #cart, #wishlist-img,#ham-icon{
+  #ham-icon{
     width: 13px;
   }
   
+  .containerd{
+    margin-top: 54px;
+  }
+
+  #notification{
+    width: 13px;
+  }
+  #notification-btn{
+    padding: 0px 4px 0px 4px;
+  }
+  #notification-icon{
+    width: 13px;
+  }
+  #cart-btn{
+    padding: 0px 4px 0px 4px;
+  }
+  #cart-icon{
+    width: 13px;
+  }
+  #ham-icon{
+    width: 10px;
+  }
 }
 
 @media screen and (max-width:408px) {
-  #profile-div img, #profile-img-div {
-    width: 20px;
-  }
-  #profile-div{
-    margin-left: 10px;
-  }
-  #notification, #cart, #wishlist-img,#ham-icon{
+ 
+  #ham-icon{
     width: 10px;
 
   }
-  #profile-span{
+  
+  
+}
+
+@media screen and (max-width:518px) {
+  #contact-div {
+  
+    
+    grid-template-columns: 1fr 1fr;
+    
+  }
+  
+}
+@media screen and (max-width:380px) {
+  #contact-div {
+  
+    
+    grid-template-columns: 1fr;
     
   }
   
