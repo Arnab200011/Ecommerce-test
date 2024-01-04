@@ -1,159 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electronics</title>
-    <link rel="stylesheet" href="./bootstrap.css">
-    <link rel="stylesheet" href="style.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electronics</title>
+  <link rel="stylesheet" href="./bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+
 </head>
 
 
 <style>
-
-  body{
+  body {
     background-color: #ebe6ed;
   }
 
-  #slider-apple,#slider-game,#slider-laptop,#slider-home,#slider-camera{
+  #slider-apple,
+  #slider-game,
+  #slider-laptop,
+  #slider-home,
+  #slider-camera {
     max-width: 1224px;
     overflow: hidden;
-    
+
     margin-left: auto;
     margin-right: auto;
   }
-  #slider-apple{
+
+  #slider-apple {
     background-color: #c0e4d2;
     border-radius: 10px;
     padding-right: 10px;
   }
-  
-  
+
+
   .product-container {
-    
+
     display: flex;
     margin-left: 2%;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none;
   }
+
   .product-container::-webkit-scrollbar {
     display: none;
   }
+
   .product-container.active {
     cursor: grabbing;
     cursor: -webkit-grabbing;
     scroll-snap-type: unset;
-    
+
   }
+
   .product-card {
     display: flex;
     min-width: 320px;
     max-height: 180px;
     max-width: 320px;
     margin-right: 18px;
-    scroll-snap-align:start;
+    scroll-snap-align: start;
     border-radius: 20px;
     box-shadow: 0px 0px 5px rgb(181, 181, 181);
-    
-    
+
+
   }
+
   .product-card img {
     width: 100%;
     height: 180px;
-    object-fit:cover;
+    object-fit: cover;
     border-radius: 10px;
-    
-    
-  }
-  .product-card img:hover{
-    transform: scale(1.03);
-    
-  }
-  
-  .product-container:hover{
-    cursor: grab;
-    
-  }
-  .product-container:active{
-    cursor: grabbing;
-    
+
+
   }
 
-  section{
+  .product-card img:hover {
+    transform: scale(1.03);
+
+  }
+
+  .product-container:hover {
+    cursor: grab;
+
+  }
+
+  .product-container:active {
+    cursor: grabbing;
+
+  }
+
+  section {
     margin-bottom: 60px;
   }
- #apple-heading{
-  background-color: rgb(208, 233, 254);
-  
-  
- }
- 
- .general{
-  
-  
-  border-radius: 20px;
-  font-size: 18px;
-  margin-bottom: 60px;
- }
 
- h1{
-  border-radius: 20px;
-  background-color:#ede4d7;
-  padding: 10px;
-  margin: 0px;
-  
-  margin-top: 8px;
-  margin-left:10px;
-  margin-right:10px;
- }
- 
+  #apple-heading {
+    background-color: rgb(208, 233, 254);
 
- @media screen and (max-width:430px) {
-  h1{
+
+  }
+
+  .general {
+
+
     border-radius: 20px;
-    background-color:#ede4d7;
+    font-size: 18px;
+    margin-bottom: 60px;
+  }
+
+  h1 {
+    border-radius: 20px;
+    background-color: #ede4d7;
     padding: 10px;
     margin: 0px;
-    font-size: 14px;
-    margin-top: 8px;
-    margin-left:10px;
-    margin-right:10px;
-   }
-  
- }
- @media screen and (max-width:593px) {
 
-  
-  
-  .general{
-  
-  
-    
-    font-size: 15px;
-    
-   }
-  
- }
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+
+  @media screen and (max-width:430px) {
+    h1 {
+      border-radius: 20px;
+      background-color: #ede4d7;
+      padding: 10px;
+      margin: 0px;
+      font-size: 14px;
+      margin-top: 8px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+  }
+
+  @media screen and (max-width:593px) {
+
+
+
+    .general {
+
+
+
+      font-size: 15px;
+
+    }
+
+  }
 </style>
+
 <body>
-  
+
   <header>
 
     <nav id="nav-bar" class="navbar navbar-expand-xl bg-body-tertiary">
       <div id="nav-div" class="container-fluid">
         <img id="logo" src="./images/logo3-removebg-preview.png" alt="">
-        <button
-          id="hamMenu"
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button id="hamMenu" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
           <img id="ham-icon" src="./images/hamburger.png" alt="">
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -164,14 +171,7 @@
           </div>
 
           <form id="search-form" class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-              
-              
-            />
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
             <button class="btn btn-outline-success" type="submit">
               Search
             </button>
@@ -179,97 +179,114 @@
 
         </div>
 
-        <div id="n-p-container" style="display: flex; justify-content: space-between; align-items:center; margin-left:50px;">
+        <div id="n-p-container"
+          style="display: flex; justify-content: space-between; align-items:center; margin-left:50px;">
 
-
-
-         
-
-          
-
-          
-    
-          
-
-          
-          
-          <!-- Default dropstart button -->
-          
-
-<!-- Split dropstart button -->
-          
-
-          
 
         </div>
 
-      
-      
+
+
     </nav>
 
   </header>
-  
+
   <section id="deals">
     <div id="slider-container">
-    
+
 
       <div id="slider-laptop">
         <div style="margin-top: 60px;" class="general" id="laptop-heading">
           <h1>Laptops & Accessories</h1>
         </div>
         <section style="margin-top: 40px;" class="product-container">
-          <div class="product-card"> <img src="https://images.newindianexpress.com/expressdeals/assets/images/content/2022/12/02/original/Best-slim-laptops.jpg"/></div>
-          <div class="product-card"> <img src="https://www.techcarbasa.com/images/Xiaomi-Notebook-Ultra-Max-11th-Gen-Intel-Core-i5-11320H-Thin-amp-Light-tech-carbasa.jpg"/></div>
-          <div class="product-card"> <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61J2IC1HGsL.jpg"/></div>
-          <div class="product-card"> <img src="https://i.ytimg.com/vi/rGiMbaz8zs8/maxresdefault.jpg"/></div>
-          <div class="product-card"> <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71me44feOlL.jpg"/></div>
-          <div class="product-card"> <img src="https://storage-asset.msi.com/global/picture/news/2023/nb/nb-20230207-1.jpg"/></div>
-          <div class="product-card"> <img src="https://contentstatic.techgig.com/photo/85763959/lenovo-focusing-heavily-on-legion-its-gaming-centric-laptop-line-up-all-you-need-to-know.jpg?22168"/></div>
-          <div class="product-card"><img src="https://img-prd-pim.poorvika.com/cdn-cgi/image/width=772,height=454,quality=75/pageimg/Laptop-Accessories-Offer-Banner-Mobile-View.jpg" alt=""></div>
-          <div class="product-card"> <img src="./electronics-img/laptop/lap2.jpg"/></div>
-          <div class="product-card"> <img src="./electronics-img/laptop/lap14.jpg"/></div>
-    
-          
+          <div class="product-card"> <img
+              src="https://images.newindianexpress.com/expressdeals/assets/images/content/2022/12/02/original/Best-slim-laptops.jpg" />
+          </div>
+          <div class="product-card"> <img
+              src="https://www.techcarbasa.com/images/Xiaomi-Notebook-Ultra-Max-11th-Gen-Intel-Core-i5-11320H-Thin-amp-Light-tech-carbasa.jpg" />
+          </div>
+          <div class="product-card"> <img
+              src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61J2IC1HGsL.jpg" /></div>
+          <div class="product-card"> <img src="https://i.ytimg.com/vi/rGiMbaz8zs8/maxresdefault.jpg" /></div>
+          <div class="product-card"> <img
+              src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71me44feOlL.jpg" /></div>
+          <div class="product-card"> <img
+              src="https://storage-asset.msi.com/global/picture/news/2023/nb/nb-20230207-1.jpg" /></div>
+          <div class="product-card"> <img
+              src="https://contentstatic.techgig.com/photo/85763959/lenovo-focusing-heavily-on-legion-its-gaming-centric-laptop-line-up-all-you-need-to-know.jpg?22168" />
+          </div>
+          <div class="product-card"><img
+              src="https://img-prd-pim.poorvika.com/cdn-cgi/image/width=772,height=454,quality=75/pageimg/Laptop-Accessories-Offer-Banner-Mobile-View.jpg"
+              alt=""></div>
+          <div class="product-card"> <img src="./electronics-img/laptop/lap2.jpg" /></div>
+          <div class="product-card"> <img src="./electronics-img/laptop/lap14.jpg" /></div>
+
+
         </section>
       </div>
-  
+
       <div id="slider-home">
         <div class="general" id="home-heading">
           <h1>Home Appliances</h1>
         </div>
         <section style="margin-top: 40px;" class="product-container">
-          <div class="product-card"> <img src="./electronics-img/home/h1.jpg"/></div>
-          <div class="product-card"> <img src="./electronics-img/home/h2.jpg"/></div>
-          <div class="product-card"> <img src="https://www.lg.com/in/images/promotion/thumbnail/HP_LG-Exchange-offer-Thumb[20231010_212512].jpg"/></div>
-          <div class="product-card"> <img src="./electronics-img/home/h6.jpg"/></div>
-          <div class="product-card"> <img src="https://i.pinimg.com/736x/6d/14/19/6d141963566ce2848050484d31a0875a.jpg"/></div>
-          <div class="product-card"> <img src="https://img.global.news.samsung.com/in/wp-content/uploads/2021/10/PR_NewsRoom-Body_3000x2000_B.jpg"/></div>
-          <div class="product-card"> <img src="https://fundamental.in/wp-content/uploads/2022/09/3R23R.png"/></div>
+          <div class="product-card"> <img src="./electronics-img/home/h1.jpg" /></div>
+          <div class="product-card"> <img src="./electronics-img/home/h2.jpg" /></div>
+          <div class="product-card"> <img
+              src="https://www.lg.com/in/images/promotion/thumbnail/HP_LG-Exchange-offer-Thumb[20231010_212512].jpg" />
+          </div>
+          <div class="product-card"> <img src="./electronics-img/home/h6.jpg" /></div>
+          <div class="product-card"> <img
+              src="https://i.pinimg.com/736x/6d/14/19/6d141963566ce2848050484d31a0875a.jpg" /></div>
+          <div class="product-card"> <img
+              src="https://img.global.news.samsung.com/in/wp-content/uploads/2021/10/PR_NewsRoom-Body_3000x2000_B.jpg" />
+          </div>
+          <div class="product-card"> <img src="https://fundamental.in/wp-content/uploads/2022/09/3R23R.png" /></div>
           <div class="product-card"><img src="https://pbs.twimg.com/media/EyWs-lzXIAA3bYW.jpg" alt=""></div>
-          <div class="product-card"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwcFJ9hmXQOPV0gbos9YAF3vG1vunI3O9U-g&usqp=CAU"/></div>
-          <div class="product-card"> <img src="https://mma.prnewswire.com/media/677378/SmartThinQFamShot2.jpg"/></div>
-    
-          
+          <div class="product-card"> <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwcFJ9hmXQOPV0gbos9YAF3vG1vunI3O9U-g&usqp=CAU" />
+          </div>
+          <div class="product-card"> <img src="https://mma.prnewswire.com/media/677378/SmartThinQFamShot2.jpg" /></div>
+
+
         </section>
       </div>
-  
+
       <div id="slider-camera">
         <div class="general" id="camera-heading">
           <h1>Camera & Accessories</h1>
         </div>
         <section style="margin-top: 40px;" class="product-container">
-          <div class="product-card"> <img src="https://www.nikon.co.in/media/wysiwyg/20230914/NIND/NIND-Nikon-Mirrorless-z-f-press-release9.jpg"/></div>
-          <div class="product-card"> <img src="https://www.nikon.co.in/media/wysiwyg/20230914/NIND/NIND-Nikon-Mirrorless-z-f-press-release9.jpg"/></div>
-          <div class="product-card"> <img src="https://www.thephoblographer.com/wp-content/uploads/2021/11/Chris-Gampat-The-Phoblographer-Nikon-zfc-review-product-images-5.61-25s320.jpg"/></div>
-          <div class="product-card"> <img src="https://www.digitaltrends.com/wp-content/uploads/2015/12/sony-alpha-a7r-ii-best-of-2015.png?p=1"/></div>
-          <div class="product-card"> <img src="https://i.ytimg.com/vi/CiZhKt7vH5U/maxresdefault.jpg"/></div>
-          <div class="product-card"> <img src="https://wavelength.focuscamera.com/wp-content/uploads/2021/07/a1_1180x559.jpg"/></div>
-          <div class="product-card"> <img src="https://digitalnegative.co/wp-content/uploads/2021/09/Singapore-Product-Photographer-SONY-A7C.jpg"/></div>
-          <div class="product-card"><img src="https://expertphotography.b-cdn.net/wp-content/uploads/2020/07/product_facebook_pink_7tltkwbkckm6949.png" alt=""></div>
-          <div class="product-card"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5tRLt4Qm4jDNBlt8lMfCVi2_-4Dt3jKe7lw&usqp=CAU"/></div>
-          <div class="product-card"> <img src="https://cdn.filtergrade.com/wp-content/uploads/2018/09/06135944/Fujifilm-X-T3-mirrorless-camera-product-photos-1024x560.jpg"/></div>
-    
-          
+          <div class="product-card"> <img
+              src="https://www.nikon.co.in/media/wysiwyg/20230914/NIND/NIND-Nikon-Mirrorless-z-f-press-release9.jpg" />
+          </div>
+          <div class="product-card"> <img
+              src="https://www.nikon.co.in/media/wysiwyg/20230914/NIND/NIND-Nikon-Mirrorless-z-f-press-release9.jpg" />
+          </div>
+          <div class="product-card"> <img
+              src="https://www.thephoblographer.com/wp-content/uploads/2021/11/Chris-Gampat-The-Phoblographer-Nikon-zfc-review-product-images-5.61-25s320.jpg" />
+          </div>
+          <div class="product-card"> <img
+              src="https://www.digitaltrends.com/wp-content/uploads/2015/12/sony-alpha-a7r-ii-best-of-2015.png?p=1" />
+          </div>
+          <div class="product-card"> <img src="https://i.ytimg.com/vi/CiZhKt7vH5U/maxresdefault.jpg" /></div>
+          <div class="product-card"> <img
+              src="https://wavelength.focuscamera.com/wp-content/uploads/2021/07/a1_1180x559.jpg" /></div>
+          <div class="product-card"> <img
+              src="https://digitalnegative.co/wp-content/uploads/2021/09/Singapore-Product-Photographer-SONY-A7C.jpg" />
+          </div>
+          <div class="product-card"><img
+              src="https://expertphotography.b-cdn.net/wp-content/uploads/2020/07/product_facebook_pink_7tltkwbkckm6949.png"
+              alt=""></div>
+          <div class="product-card"> <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5tRLt4Qm4jDNBlt8lMfCVi2_-4Dt3jKe7lw&usqp=CAU" />
+          </div>
+          <div class="product-card"> <img
+              src="https://cdn.filtergrade.com/wp-content/uploads/2018/09/06135944/Fujifilm-X-T3-mirrorless-camera-product-photos-1024x560.jpg" />
+          </div>
+
+
         </section>
       </div>
     </div>
@@ -308,20 +325,21 @@
               <img style="width: 30px" src="images/gmail.png" alt="" />
               E-mail:<span id="contact-span">arnabmondal@gmail.com</span>
             </li>
-              <li style="font-size: 18px; margin-top: 20px"><b>Download App</b></li>
-              <li style="font-size: 15px; display:flex;">
-                <img style="width: 140px" src="images/googlePlay.png" alt="" />
-                <img width="100px" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="">
-              </li>
-            
-            
+            <li style="font-size: 18px; margin-top: 20px"><b>Download App</b></li>
+            <li style="font-size: 15px; display:flex;">
+              <img style="width: 140px" src="images/googlePlay.png" alt="" />
+              <img width="100px" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt="">
+            </li>
+
+
           </ul>
         </div>
 
 
-        
+
       </div>
-      
+
       <div class="payment-div">
         <p id="payment-method">Payment Method</p>
         <img class="paymentMethodIcon" src="images/visa.png" alt="" />
@@ -329,94 +347,87 @@
         <img class="paymentMethodIcon" src="images/master-card.png" alt="" />
         <img class="paymentMethodIcon" src="images/paypal.png" alt="" />
         <img class="paymentMethodIcon" src="images/paytm.png" alt="" />
-        <img
-          id="net-banking-icon"
-          width="100px"
-          src="images/netBanking.png"
-          alt=""
-        />
+        <img id="net-banking-icon" width="100px" src="images/netBanking.png" alt="" />
       </div>
 
       <div>
-        <p align="center" style="color: black; margin-top: 50px; font-size: 10px;padding-bottom:10px;">Created by Arnab Mondal &copyCopyright</p>
+        <p align="center" style="color: black; margin-top: 50px; font-size: 10px;padding-bottom:10px;">Created by Arnab
+          Mondal &copyCopyright</p>
       </div>
     </div>
   </section>
 
-  <script
-  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-  crossorigin="anonymous"
-></script>
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-  integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-  crossorigin="anonymous"
-></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
 
-<script>
-  
+  <script>
 
 
 
 
 
 
-let section = document.querySelectorAll("section");
-let menu = document.querySelectorAll("header nav a");
 
-window.onscroll = () => {
-section.forEach((i) => {
-let top = window.scrollY;
-let offset = i.offsetTop - 150;
-let height = i.offsetHeight;
-let id = i.getAttribute("id");
+    let section = document.querySelectorAll("section");
+    let menu = document.querySelectorAll("header nav a");
 
-if (top >= offset && top < offset + height) {
-  menu.forEach((link) => {
-    link.classList.remove("active");
-    document
-      .querySelector("header nav a[href*=" + id + "]")
-      .classList.add("active");
-  });
-}
-});
-};
+    window.onscroll = () => {
+      section.forEach((i) => {
+        let top = window.scrollY;
+        let offset = i.offsetTop - 150;
+        let height = i.offsetHeight;
+        let id = i.getAttribute("id");
 
-function reveal() {
-let reveals = document.querySelectorAll(".reveal");
+        if (top >= offset && top < offset + height) {
+          menu.forEach((link) => {
+            link.classList.remove("active");
+            document
+              .querySelector("header nav a[href*=" + id + "]")
+              .classList.add("active");
+          });
+        }
+      });
+    };
 
-for (let i = 0; i < reveals.length; i++) {
-let windowHeight = window.innerHeight;
-let elementTop = reveals[i].getBoundingClientRect().top;
-let elementVisible = 150;
+    function reveal() {
+      let reveals = document.querySelectorAll(".reveal");
 
-if (elementTop < windowHeight - elementVisible) {
-  reveals[i].classList.add("active");
-} else {
-  reveals[i].classList.remove("active");
-}
-}
-}
+      for (let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = reveals[i].getBoundingClientRect().top;
+        let elementVisible = 150;
 
-window.addEventListener("scroll", reveal);
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
 
-// To check the scroll position on page load
-reveal();
+    window.addEventListener("scroll", reveal);
 
-let counter = 1;
-setInterval(function () {
-document.querySelector("#radio" + counter).checked = true;
-counter += 1;
-if (counter > 4) {
-counter = 1;
-}
-}, 4000);
+    // To check the scroll position on page load
+    reveal();
 
-
-
+    let counter = 1;
+    setInterval(function () {
+      document.querySelector("#radio" + counter).checked = true;
+      counter += 1;
+      if (counter > 4) {
+        counter = 1;
+      }
+    }, 4000);
 
 
-</script>
+
+
+
+  </script>
 </body>
+
 </html>
