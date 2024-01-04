@@ -183,13 +183,86 @@
     height: 23px;
   }
  }
+
+ #nav-item{
+  display: flex;
+  justify-content: space-around;
+ }
 </style>
 
 <body>
 
-  
-            
   <header>
+
+    <nav id="nav-bar" class="navbar navbar-expand-xl bg-body-tertiary">
+      <div id="nav-div" class="container-fluid">
+        <img id="logo" src="./images/logo3-removebg-preview.png" alt="">
+        <button
+          id="hamMenu"
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <img id="ham-icon" src="./images/hamburger.png" alt="">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div id="nav-item">
+            <a href="./index.html" class="active">Home</a>
+            <a href="#deals">Deals</a>
+            <a href="#contact">Contact</a>
+          </div>
+
+          <form id="search-form" class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              
+              
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+
+        </div>
+
+        <div id="n-p-container" style="display: flex; justify-content: space-between; align-items:center; margin-left:50px;">
+
+
+
+         
+
+          
+
+          
+    
+          
+
+          
+          
+          <!-- Default dropstart button -->
+          
+
+<!-- Split dropstart button -->
+          
+
+          
+
+        </div>
+
+      
+      
+    </nav>
+
+  </header>
+            
+  <!-- <header>
     <nav id="nav-bar" class="navbar navbar-expand-xl bg-body-tertiary">
       <a href="./index.html">Home</a>
       <a href="#deals">Deals</a>
@@ -199,7 +272,7 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>     
     </nav>
-  </header>
+  </header> -->
 
   <!-- main body start here -->
   
@@ -758,9 +831,9 @@
 
   
 
-  <section style="padding-left: 50px;" class="reveal" id="contact">
+  <section class="reveal" id="contact">
     <div class="reveal">
-      <div id="contact-div">
+      <div id="contact-div" style="padding-left: 30px;">
         <div>
           <ul>
             <li style="font-size: 18px; font-weight: 700">Catagory</li>
